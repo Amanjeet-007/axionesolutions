@@ -1,0 +1,14 @@
+# robots.txt for https://axionesolution.com/
+# Managed via Google Search Console best practices
+
+User-agent: *
+Allow: /
+
+# Disallow administrative, private, or staging directories if any exist in the future
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+
+# Host and Sitemap locations
+Host: https://axionesolution.com
+Sitemap: https://axionesolution.com/sitemap.xml
