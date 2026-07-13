@@ -302,6 +302,7 @@ button {
 }
 
 .menu-btn {
+  visibility: hidden;
   transition: 0.3s;
   display: none;
   border: none;
@@ -332,6 +333,7 @@ button {
 
 .mobile-sidebar {
   position: fixed;
+  display: none;
   top: 50;
   right: -300px;
   width: 280px;
@@ -340,12 +342,12 @@ button {
   transition: 0.35s ease;
   z-index: 999;
   padding: 30px;
-  display: flex;
   flex-direction: column;
   color: white;
 }
 
 .mobile-sidebar.show {
+  display: flex;
   right: 0;
 }
 
@@ -428,6 +430,7 @@ button {
 
 .trusted {
   display: flex;
+  width: 100vw;
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
