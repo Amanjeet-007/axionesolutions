@@ -203,15 +203,19 @@ button {
   scale: 1.03;
   background: rgba(255, 255, 255, 0.08);
 }
+
+/* ============================================
+   HEADER / NAVBAR (consolidated — single source of truth)
+   ============================================ */
 .site-header {
   padding: 10px;
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 999;
+  width: 100%;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line-100);
-  width: 100vw;
 }
 
 .site-header .wrap {
@@ -219,7 +223,6 @@ button {
   align-items: center;
   justify-content: space-between;
   height: 4.5rem;
-  /* gap: 1.5rem; */
 }
 
 .brand {
@@ -245,9 +248,9 @@ button {
 }
 
 .main-nav {
-  display: none;
+  display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 35px;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--ink-600);
@@ -256,57 +259,32 @@ button {
 .main-nav a {
   position: relative;
   padding-bottom: 0.35rem;
-  transition: color 0.15s ease;
-}
-
-.main-nav a:hover {
-  color: var(--purple-600);
-}
-
-.main-nav a.active {
-  color: var(--purple-600);
-  border-bottom: 2px solid var(--purple-600);
-  /* background-color: var(--purple-400); */
-}
-
-.site-header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: #fff;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 35px;
-}
-
-.main-nav a{
   text-decoration: none;
   color: #111;
   font-weight: 500;
-  transition: 0.3s;
+  transition:
+    color 0.15s ease,
+    0.3s;
 }
 
 .main-nav a:hover,
-.main-nav .active
- {
+.main-nav a.active {
   color: var(--purple-700);
   background-color: #fff;
   padding: 4px 10px;
   border-radius: 4px;
 }
 
-.menu-btn , .menu-btn svg{
+.menu-btn,
+.menu-btn svg {
   display: none;
   border: 0;
   background-color: transparent;
-  transition: .3s;
+  transition: 0.3s;
   transform-origin: center;
 }
-.mobile-menu{
+
+.mobile-menu {
   display: none;
   height: 90vh;
   width: min-content;
@@ -315,36 +293,39 @@ button {
   opacity: 0;
   right: 0px;
   top: 13.8vh;
-  transition: .5s;
+  transition: 0.5s;
   flex-direction: column;
   padding: 10px 20px;
   justify-content: space-between;
+  z-index: 998;
 }
-.mobile-menu nav{
+
+.mobile-menu nav {
   display: flex;
   gap: 10px;
   flex-direction: column;
   width: 100%;
   padding: 10px;
-
 }
 
-
-
 @media (max-width: 992px) {
-
   .brand {
     width: 150px;
   }
-  .menu-btn, .menu-btn svg{
-  display: flex;
-}
+
+  .menu-btn,
+  .menu-btn svg {
+    display: flex;
+  }
 
   .main-nav,
   .desktop-btn {
     display: none;
   }
 
+  .mobile-menu {
+    display: flex;
+  }
 }
 
 .hero {
@@ -1000,9 +981,6 @@ button {
 .footer-bottom a:hover {
   color: var(--white);
 }
- .menu-btn, .menu-btn svg{
-  display: none;
- }
 
 /* big screen */
 @media (min-width: 860px) {
@@ -1031,14 +1009,9 @@ button {
 }
 
 @media (max-width: 640px) {
-    .mobile-menu{
-  display: flex;}
   .hero-visual {
     margin-top: -60px;
   }
-    .menu-btn , .menu-btn svg{
-  display: flex;
-}
   .desk {
     display: none;
   }
