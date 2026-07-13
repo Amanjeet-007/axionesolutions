@@ -20,6 +20,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
+
     <header class="site-header">
       <div class="head wrap">
         <a href="#" class="brand">
@@ -27,21 +28,43 @@
         </a>
 
         <nav class="main-nav">
-          <a href="./index.html">Home</a>
+          <a href="./index.html" >Home</a>
           <a href="./services.html">Services</a>
-          <a href="./about.html">About Us</a>
-          <!-- <a href="./portfolio.html">Our Work</a> -->
-          <!-- <a href="./blog.html">Blog</a> -->
+          <a href="./about.html" >About Us</a>
           <a href="./contact.html" class="active">Contact</a>
         </nav>
 
+        <a href="#" class="btn btn-primary desktop-btn">
+          Get in Touch
+          <i data-lucide="arrow-right" class="icon"></i>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">
+          <svg
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#6b21a8"
+          >
+            <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu">
+        <nav class="main-nav">
+          <a href="./index.html" >Home</a>
+          <a href="./services.html">Services</a>
+          <a href="./about.html" >About Us</a>
+          <a href="./contact.html" class="active">Contact</a>
+        </nav>
         <a href="#" class="btn btn-primary">
-          Get in Touch <i data-lucide="arrow-right" class="icon"></i>
+          Get in Touch
+          <i data-lucide="arrow-right" class="icon"></i>
         </a>
       </div>
     </header>
 
-    <!-- ============ CONTACT HERO ============ -->
     <section class="hero">
       <div class="wrap">
         <div class="hero-copy">
@@ -56,7 +79,6 @@
       </div>
     </section>
 
-    <!-- ============ CONTACT MAIN ============ -->
     <section class="contact-section">
       <div class="wrap contact-grid">
         <!-- Contact Info -->
@@ -194,7 +216,6 @@
       </div>
     </section>
 
-    <!-- ============ MAP ============ -->
     <section class="contact-map">
       <div class="wrap">
         <div class="contact-map-frame">
@@ -207,7 +228,6 @@
       </div>
     </section>
 
-    <!-- ============ FAQ ============ -->
     <section class="services">
       <div class="wrap">
         <div class="section-head">
@@ -391,5 +411,6 @@
     <script>
       lucide.createIcons();
     </script>
+    <script src="script.js"></script>
   </body>
 </html>

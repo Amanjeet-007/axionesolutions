@@ -283,8 +283,7 @@ button {
   gap: 35px;
 }
 
-.main-nav a,
-.mobile-nav a {
+.main-nav a{
   text-decoration: none;
   color: #111;
   font-weight: 500;
@@ -292,75 +291,44 @@ button {
 }
 
 .main-nav a:hover,
-.mobile-nav a:hover,
-.main-nav .active,
-.mobile-nav .active {
+.main-nav .active
+ {
   color: var(--purple-700);
   background-color: #fff;
   padding: 4px 10px;
   border-radius: 4px;
 }
 
-.menu-btn {
-  visibility: hidden;
-  transition: 0.3s;
+.menu-btn{
+  border: 0;
+  background-color: transparent;
+  transition: .3s;
+  transform-origin: center;
+}
+.mobile-menu{
   display: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
-}
-
-.menu-btn i {
-  width: 30px;
-  height: 30px;
-}
-
-.menu-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  height: 90vh;
+  width: min-content;
+  background-color: var(--purple-800);
+  position: absolute;
   opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  z-index: 998;
-}
-
-.menu-overlay.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.mobile-sidebar {
-  position: fixed;
-  display: none;
-  top: 50;
-  right: -300px;
-  width: 280px;
-  height: 100%;
-  background: var(--purple-800);
-  transition: 0.35s ease;
-  z-index: 999;
-  padding: 30px;
+  right: 0px;
+  top: 13.8vh;
+  transition: .5s;
   flex-direction: column;
-  color: white;
+  padding: 10px 20px;
+  justify-content: space-between;
 }
-
-.mobile-sidebar.show {
+.mobile-menu nav{
   display: flex;
-  right: 0;
-}
-
-.mobile-nav {
-  display: flex;
+  gap: 10px;
   flex-direction: column;
-  gap: 25px;
+  width: 100%;
+  padding: 10px;
+
 }
 
-.mobile-nav a {
-  color: white;
-  font-size: 18px;
-}
+
 
 @media (max-width: 992px) {
   .brand {
@@ -372,13 +340,6 @@ button {
     display: none;
   }
 
-  .menu-btn {
-    margin-right: 15px;
-    color: #9333ea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .hero {
@@ -430,6 +391,7 @@ button {
 
 .trusted {
   display: flex;
+  justify-content: center;
   width: 100vw;
   flex-direction: column;
   gap: 0.75rem;
@@ -462,7 +424,7 @@ button {
   letter-spacing: -0.01em;
 }
 
-/* Hero visual */
+
 .hero-visual {
   display: flex;
   align-items: center;
