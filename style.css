@@ -442,6 +442,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--ink-400);
 }
 
