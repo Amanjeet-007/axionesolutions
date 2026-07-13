@@ -299,7 +299,8 @@ button {
   border-radius: 4px;
 }
 
-.menu-btn{
+.menu-btn , .menu-btn svg{
+  display: none;
   border: 0;
   background-color: transparent;
   transition: .3s;
@@ -331,9 +332,13 @@ button {
 
 
 @media (max-width: 992px) {
+
   .brand {
     width: 150px;
   }
+  .menu-btn, .menu-btn svg{
+  display: flex;
+}
 
   .main-nav,
   .desktop-btn {
@@ -995,14 +1000,12 @@ button {
 .footer-bottom a:hover {
   color: var(--white);
 }
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (min-width: 860px) {
-  .main-nav {
-    display: flex;
-  }
+ .menu-btn, .menu-btn svg{
+  display: none;
+ }
 
+/* big screen */
+@media (min-width: 860px) {
   .hero .wrap {
     flex-direction: row;
     align-items: center;
@@ -1028,9 +1031,14 @@ button {
 }
 
 @media (max-width: 640px) {
+    .mobile-menu{
+  display: flex;}
   .hero-visual {
     margin-top: -60px;
   }
+    .menu-btn , .menu-btn svg{
+  display: flex;
+}
   .desk {
     display: none;
   }
@@ -1151,7 +1159,7 @@ button {
   height: 1.25rem;
   color: #94a3b8; /* slate-400 */
 }
-
+/* big screen */
 /* Mirrors the original "md:block" / "md:hidden" swap at the 768px breakpoint */
 @media (min-width: 768px) {
   .brand img {

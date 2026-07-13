@@ -1,18 +1,8 @@
-/* ============================================
-   AXIONE SOLUTIONS — ABOUT PAGE ADDON STYLES
-   Extends style.css using the same design tokens.
-   Load this AFTER style.css.
-   ============================================ */
 
-/* ============ COMPANY PROFILE TEXT BLOCK ============ */
-/* Reuses .why / .why-copy from style.css, but on the
-   About page the copy block can run longer, so give
-   paragraphs breathing room when there's more than one. */
 .why-copy p + p {
   margin-top: -0.4rem;
 }
 
-/* ============ FOUNDER / LEADERSHIP SECTION ============ */
 .founder-section .wrap {
   display: flex;
   flex-direction: column;
@@ -73,12 +63,6 @@
   font-weight: 500;
   margin-top: 0.15rem;
 }
-
-/* ============ VALUES CARDS ============ */
-/* .service-card is reused as-is from style.css for the
-   "What We Stand For" section — no overrides needed. */
-
-/* ============ RESPONSIVE ============ */
 @media (max-width: 640px) {
   .founder-card {
     padding: 1.5rem;
